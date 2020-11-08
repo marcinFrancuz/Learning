@@ -29,7 +29,6 @@ public class WarunkiZadania {
         System.out.println(" ");
         System.out.println("Zadanie 3 - kalkulator switch");
 
-
         switch (operacja) {
             case '+':
                 wynik = (liczba1 + liczba2);
