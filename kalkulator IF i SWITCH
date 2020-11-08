@@ -1,0 +1,52 @@
+package sekcja7_instr_warunkowe;
+
+public class WarunkiZadania {
+    public static void main (String[] args){
+
+        //zadanie_3
+        System.out.println("Zadanie 3 - kalkulator if");
+
+        double liczba1 = 5;
+        double liczba2 = 3;
+        char operacja = '+';
+        if (operacja == '+') {
+            double dodawanie = (liczba1 + liczba2);
+            System.out.println(liczba1 + " + " + liczba2 + " = " + dodawanie);
+        } else if (operacja == '-') {
+            double odejmowanie = (liczba1 - liczba2);
+            System.out.println(liczba1 + " - " + liczba2 + " = " + odejmowanie);
+        } else if (operacja == '*') {
+            double mnozenie = (liczba1 * liczba2);
+            System.out.println(liczba1 + " * " + liczba2 + " = " + mnozenie);
+        } else if (operacja == '/') {
+            double dzielenie = (liczba1 / liczba2);
+            System.out.println(liczba1 + " / " + liczba2 + " = " + dzielenie);
+        } else {
+            System.out.println("Nieprawidłowy typ operacji!");
+        }
+
+        System.out.println(" ");
+        System.out.println("Zadanie 3 - kalkulator switch");
+
+        switch (operacja) {
+            case '+':
+                double dodawanie = (liczba1 + liczba2);
+                System.out.println(liczba1 + " + " + liczba2 + " = " + dodawanie);
+                break;
+            case '-':
+                double odejmowanie = (liczba1 - liczba2);
+                System.out.println(liczba1 + " - " + liczba2 + " = " + odejmowanie);
+                break;
+            case '*':
+                double mnozenie = (liczba1 * liczba2);
+                System.out.println(liczba1 + " * " + liczba2 + " = " + mnozenie);
+                break;
+            case '/':
+                double dzielenie = (liczba1 / liczba2);
+                System.out.println(liczba1 + " / " + liczba2 + " = " + dzielenie);
+                break;
+            default:
+                System.out.println("Nieprawidłowy typ operacji!");
+        }
+    }
+}
