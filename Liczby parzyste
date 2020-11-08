@@ -2,7 +2,7 @@ public class WarunkiZadania {
     public static void main (String[] args){
 
         //zadanie_1
-        System.out.println("Zadanie 1");
+        System.out.println("Zadanie 1: liczby parzyste");
 
         int liczba = 9;
         if ((liczba%2) == 0){
