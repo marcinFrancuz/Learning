@@ -2,25 +2,26 @@ package sekcja7_instr_warunkowe;
 
 public class WarunkiZadania {
     public static void main (String[] args){
-
-        //zadanie_3
+    
+    //zadanie_3
         System.out.println("Zadanie 3 - kalkulator if");
 
-        double liczba1 = 5;
-        double liczba2 = 3;
+        double liczba1 = 189;
+        double liczba2 = 12.2;
         char operacja = '+';
+        double wynik = 0;
         if (operacja == '+') {
-            double dodawanie = (liczba1 + liczba2);
-            System.out.println(liczba1 + " + " + liczba2 + " = " + dodawanie);
+            wynik = (liczba1 + liczba2);
+            System.out.println(liczba1 + " + " + liczba2 + " = " + wynik);
         } else if (operacja == '-') {
-            double odejmowanie = (liczba1 - liczba2);
-            System.out.println(liczba1 + " - " + liczba2 + " = " + odejmowanie);
+            wynik = (liczba1 - liczba2);
+            System.out.println(liczba1 + " - " + liczba2 + " = " + wynik);
         } else if (operacja == '*') {
-            double mnozenie = (liczba1 * liczba2);
-            System.out.println(liczba1 + " * " + liczba2 + " = " + mnozenie);
+            wynik = (liczba1 * liczba2);
+            System.out.println(liczba1 + " * " + liczba2 + " = " + wynik);
         } else if (operacja == '/') {
-            double dzielenie = (liczba1 / liczba2);
-            System.out.println(liczba1 + " / " + liczba2 + " = " + dzielenie);
+            wynik = (liczba1 / liczba2);
+            System.out.println(liczba1 + " / " + liczba2 + " = " + wynik);
         } else {
             System.out.println("Nieprawidłowy typ operacji!");
         }
@@ -28,22 +29,23 @@ public class WarunkiZadania {
         System.out.println(" ");
         System.out.println("Zadanie 3 - kalkulator switch");
 
+
         switch (operacja) {
             case '+':
-                double dodawanie = (liczba1 + liczba2);
-                System.out.println(liczba1 + " + " + liczba2 + " = " + dodawanie);
+                wynik = (liczba1 + liczba2);
+                System.out.println(liczba1 + " " + operacja + " " + liczba2 + " = " + wynik);
                 break;
             case '-':
-                double odejmowanie = (liczba1 - liczba2);
-                System.out.println(liczba1 + " - " + liczba2 + " = " + odejmowanie);
+                wynik = (liczba1 - liczba2);
+                System.out.println(liczba1 + " " + operacja + " " + liczba2 + " = " + wynik);
                 break;
             case '*':
-                double mnozenie = (liczba1 * liczba2);
-                System.out.println(liczba1 + " * " + liczba2 + " = " + mnozenie);
+                wynik = (liczba1 * liczba2);
+                System.out.println(liczba1 + " " + operacja + " " + liczba2 + " = " + wynik);
                 break;
             case '/':
-                double dzielenie = (liczba1 / liczba2);
-                System.out.println(liczba1 + " / " + liczba2 + " = " + dzielenie);
+                wynik = (liczba1 / liczba2);
+                System.out.println(liczba1 + " " + operacja + " " + liczba2 + " = " + wynik);
                 break;
             default:
                 System.out.println("Nieprawidłowy typ operacji!");
