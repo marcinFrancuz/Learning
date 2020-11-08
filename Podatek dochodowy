@@ -1,0 +1,27 @@
+public class WarunkiZadania {
+    public static void main (String[] args){
+
+        //zadanie_2
+        System.out.println("Zadanie 2: podatek");
+
+        int przychod = 15000;
+        int wydatki = 20000;
+        int dochod = przychod - wydatki;
+        if (dochod > 0 && dochod <= 85528){
+            double podatek17 = dochod*0.17;
+            podatek17 = podatek17 * 100;            // zaokrąglenie do 2 miejsca po przecinku
+            podatek17 = Math.round(podatek17);
+            podatek17 = podatek17 / 100;
+            System.out.println("I próg podatkowy. Podatek do zapłacenia wynosi " + podatek17 + "zł");
+        } else if (dochod > 85528) {
+            double podatek17 = 85528*0.17;
+            double podatek32 = (dochod-85528)*0.32;
+            double podatekLaczny = podatek17+podatek32;
+            podatekLaczny = podatekLaczny * 100;        // zaokrąglenie do 2 miejsca po przecinku
+            podatekLaczny = Math.round (podatekLaczny);
+            podatekLaczny = podatekLaczny / 100;
+            System.out.println("II próg podatkowy. Podatek do zapłacenia wynosi " + podatekLaczny + "zł");
+
+        } else if (dochod <= 0) {
+            System.out.println("Dochód ujemny, brak podatku do zapłacenia.");
+        }
