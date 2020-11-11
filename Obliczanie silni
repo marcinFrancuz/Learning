@@ -1,0 +1,17 @@
+public class PetleZadania {
+    public static void main (String[] args){
+
+        long wynik = 1L;
+        long i = 5L;
+
+        if (i > 0L) {
+            System.out.print(i + "! = ");
+            for (; i > 0L; i--) {
+                wynik *= i;
+            }
+            System.out.println(wynik);
+        } else {
+            System.out.println("Podano liczbę ujemną!");
+        }
+    }
+}
