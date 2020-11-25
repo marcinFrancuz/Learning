@@ -1,0 +1,69 @@
+// w klasie Pracownik
+public class Pracownik {
+    private String imie;
+    private String nazwisko;
+    private int wynagodzenie;
+
+    public void pracownik (String imie, String nazwisko, int wynagrodzenie){
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.wynagodzenie = wynagrodzenie;
+        System.out.println();
+        System.out.println("Imię: " + imie);
+        System.out.println("Nazwisko: " + nazwisko);
+        System.out.println("Wynagrodzenie: " + wynagrodzenie);
+
+    }
+}
+
+
+// w klasie Lekarz
+public class Lekarz extends Pracownik {
+    private double premia;
+
+    public double setPremia(double d) {
+        premia = d;
+        return premia;
+    }
+
+    @Override
+    public void pracownik(String imie, String nazwisko, int wynagrodzenie) {
+        super.pracownik(imie, nazwisko, wynagrodzenie);
+        System.out.println("Premia: " + premia);
+    }
+}
+
+
+//w klasie Ordynator
+public class Ordynator extends Lekarz {
+    private int nadgodziny;
+    
+    public int setNadgodziny(int n){
+        nadgodziny = n;
+        return nadgodziny;
+    }
+
+    @Override
+    public void pracownik(String imie, String nazwisko, int wynagrodzenie) {
+        super.pracownik(imie, nazwisko, wynagrodzenie);
+        System.out.println("Nadgodziny: " + nadgodziny);
+    }
+}
+
+// w klasie MainSzpital
+public class MainSzpital {
+    public static void main(String[] args){
+        Pracownik pracownik = new Pracownik();
+        Lekarz lekarz = new Lekarz();
+        Ordynator ordynator = new Ordynator();
+
+        pracownik.pracownik("Jan", "Kowalski", 4500);
+
+        lekarz.setPremia(200);
+        lekarz.pracownik("Krzysztof", "Ibisz", 4500);
+
+        ordynator.setPremia(500);
+        ordynator.setNadgodziny(20);
+        ordynator.pracownik("Lukasz", "Szumowski", 2300);
+    }
+}
