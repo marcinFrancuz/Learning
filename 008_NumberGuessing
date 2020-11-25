@@ -14,16 +14,16 @@ public class NumberGuess {
         System.out.println("Podaj swoje imię.");
         String name = scanner.nextLine();
         System.out.println("Witaj " + name + "!");
+        System.out.println("Podaj liczbę z zakresu 0 - 100.");
 
 //zgadywanie liczby
         while (!wasNumberGuessed) {
-            System.out.println("Podaj liczbę z zakresu 0 - 100...");
             int userNumber = scanner.nextInt();
 
             if (userNumber < numberToGuess) {
-                System.out.println("Liczba jest za mała!");
+                System.out.println("Liczba jest za mała! Podaj nową liczbę...");
             } else if (userNumber > numberToGuess) {
-                System.out.println("Liczba jest za duża!");
+                System.out.println("Liczba jest za duża! Podaj nową liczbę...");
             } else {
                 if (name.endsWith("a")) {
                     System.out.println("Gratulacje, " + name + " odgadłaś liczbę!");
